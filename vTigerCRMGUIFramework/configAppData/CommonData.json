@@ -1,0 +1,7 @@
+{
+"browser" : "edge",
+"url" : "http://localhost:8888/index.php?action=index&module=Home",
+"username" : "admin",
+"password" : "admin",
+"timeout" : 20
+}

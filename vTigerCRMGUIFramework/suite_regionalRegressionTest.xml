@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.vTiger.contactTest.CreateContact_Test">
+      	<methods>
+      		<include name="createContactWithOrganization_Test"></include>
+      	</methods>
+      </class>
+      <class name="com.vTiger.organizationTest.CreateOrganization_Test">
+      	<methods>
+      		<include name="createOrganization_Test"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
