@@ -52,7 +52,7 @@ public class CreateContact_Test extends BaseClass {
 		/* Read test script data from excel */
 		ExcelUtility eLib = new ExcelUtility();
 		JavaUtility jLib = new JavaUtility();
-		String lastName = eLib.getDataFromExcel("Sheet3", 5, 3) + jLib.getRandomNumber();
+		String lastName = eLib.getDataFromExcel("Sheet3", 5, 2) + jLib.getRandomNumber();
 
 		HomePage hp = new HomePage(driver);
 		ContactsPage cp = new ContactsPage(driver);

@@ -49,8 +49,11 @@ public class BaseClass {
 	public void beforeClass() throws IOException {						//String bname
 		System.out.println("Launching browser");
 //		String BROWSER = bname;
-		String BROWSER = fUtil.getDataFromProperties("browser");
-		String URL = fUtil.getDataFromProperties("url");
+//		String BROWSER = fUtil.getDataFromProperties("browser");
+//		String URL = fUtil.getDataFromProperties("url");
+		
+		String BROWSER = System.getProperty("browser",fUtil.getDataFromProperties("browser"));
+		String URL = System.getProperty("url",fUtil.getDataFromProperties("url"));
 		
 		if (BROWSER.contains("firefox")) {
 			driver = new ChromeDriver();
@@ -72,8 +75,10 @@ public class BaseClass {
 	@BeforeMethod(alwaysRun = true)
 	public void beforeTest() throws IOException {
 		System.out.println("Login Application");
-		String USERNAME = fUtil.getDataFromProperties("username");
-		String PASSWORD = fUtil.getDataFromProperties("password");
+//		String USERNAME = fUtil.getDataFromProperties("username");
+//		String PASSWORD = fUtil.getDataFromProperties("password");
+		String USERNAME = System.getProperty("UN",fUtil.getDataFromProperties("username"));
+		String PASSWORD = System.getProperty("PWD",fUtil.getDataFromProperties("password"));
 		LoginPage lp = new LoginPage(driver);
 		lp.loginApplication(USERNAME, PASSWORD);
 	}
