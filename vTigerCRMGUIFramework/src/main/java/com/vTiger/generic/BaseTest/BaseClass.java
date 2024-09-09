@@ -77,8 +77,8 @@ public class BaseClass {
 		System.out.println("Login Application");
 //		String USERNAME = fUtil.getDataFromProperties("username");
 //		String PASSWORD = fUtil.getDataFromProperties("password");
-		String USERNAME = System.getProperty("UN",fUtil.getDataFromProperties("username"));
-		String PASSWORD = System.getProperty("PWD",fUtil.getDataFromProperties("password"));
+		String USERNAME = System.getProperty("username",fUtil.getDataFromProperties("username"));
+		String PASSWORD = System.getProperty("password",fUtil.getDataFromProperties("password"));
 		LoginPage lp = new LoginPage(driver);
 		lp.loginApplication(USERNAME, PASSWORD);
 	}
